@@ -1,0 +1,387 @@
+{
+	"info": {
+		"_postman_id": "eea2e0d6-09c0-48eb-9b6b-5d13c6df83ca",
+		"name": "Automarket",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38396476"
+	},
+	"item": [
+		{
+			"name": "UserController",
+			"item": [
+				{
+					"name": "Registrar Usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"cliente\",\r\n    \"email\": \"cliente@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/user/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/user/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarToken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/user/actualizartoken",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"actualizartoken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "infoUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:3002/api/user/loginUser",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"user",
+								"loginUser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CarController",
+			"item": [
+				{
+					"name": "GetAllCars",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/Cars",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Cars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DetailsCar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/Car/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Car",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateCoche",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"modelo_id\": 1,\r\n  \"anio_fabricacion\": 2022,\r\n  \"precio\": 19500,\r\n  \"descripcion\": \"Vehículo en excelente estado, único dueño, revisiones al día.\",\r\n  \"km\": 45000,\r\n  \"ubicacion\": \"Madrid\",\r\n  \"garantia\": 12,\r\n  \"created_at\": \"2025-05-20T10:00:00.000Z\",\r\n  \"updated_at\": \"2025-05-20T10:00:00.000Z\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/Cars/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Cars",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Caracteristica",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"coche_id\": 1,\r\n  \"motor\": \"1.6 TDI\",\r\n  \"puertas\": 5,\r\n  \"transmision\": \"Manual\",\r\n  \"combustible\": \"Diesel\",\r\n  \"color\": \"Rojo\",\r\n  \"traccion\": \"Delantera\",\r\n  \"cilindrada\": 1600,\r\n  \"potencia\": 115,\r\n  \"plazas\": 5,\r\n  \"consumo\": 4.5\r\n}\r\n"
+						},
+						"url": {
+							"raw": "{{url}}/api/Caracteristicas",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Caracteristicas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/Cars/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Cars",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FiltroCoches",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:3002/api/Cars/filtro/?page=1&limit=5&filter=2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"Cars",
+								"filtro",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "filter",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TamañosCoche",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/CountCars",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"CountCars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ModelosMarcaGet",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/modelos/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"modelos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FiltrosController",
+			"item": [
+				{
+					"name": "detailsTipoCoche",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getMarcas",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UserCarController",
+			"item": [
+				{
+					"name": "CochesVenta",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "cocheFavoritos",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "detailsCocheFavorito",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/user/car/favoritos/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"car",
+								"favoritos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/user/car/favoritos/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"car",
+								"favoritos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
